@@ -1,4 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
+require('@nomiclabs/hardhat-ethers');
+require('@openzeppelin/hardhat-upgrades');
+require('dotenv').config()
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -16,6 +19,17 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+
+const PRIVATE_KEY = process.env.PVT_KEY
+const ROPSTEN_RPC_URL = process.env.ROPSTEN_RPC_URL
 module.exports = {
+  defaultNetwork: "ropsten",
+  networks: {
+    ropsten: {
+      url: ROPSTEN_RPC_URL,
+      accounts: [PRIVATE_KEY]
+
+    }
+  },
   solidity: "0.8.4",
 };
