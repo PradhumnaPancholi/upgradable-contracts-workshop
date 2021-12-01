@@ -78,6 +78,25 @@
           }
         }
       }
+    },
+    "828b44dc79273a7ea9a9c4827dd0a42961691a7c380a1b2fcf425d844384edd2": {
+      "address": "0x7fda356C1A10547967BD9E1D28C3d6Fc70178435",
+      "txHash": "0xc9e81a75b528cfa452a2a0e4de9c6fce843c4c0f99ea346251b501dc82b23416",
+      "layout": {
+        "storage": [
+          {
+            "contract": "StorageV2",
+            "label": "value",
+            "type": "t_uint256",
+            "src": "contracts/StorageV2.sol:7"
+          }
+        ],
+        "types": {
+          "t_uint256": {
+            "label": "uint256"
+          }
+        }
+      }
     }
   }
 }
